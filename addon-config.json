@@ -1,7 +1,27 @@
 {
-    "addonName": "OMG Premium TV",
-    "addonId": "org.mccoy88f.omgpremiumtv",
-    "addonDescription": "Addon per Stremio che ti permette di guardare i tuoi canali TV e IPTV preferiti da playlist M3U/M3U8, arricchiti con informazioni sui programmi (EPG)",
-    "addonVersion": "6.0.0",
-    "addonLogo": "https://raw.githubusercontent.com/mccoy88f/OMG-Plus-TV-Stremio-Addon/refs/heads/main/tv.png"
+  "id": "org.fraceks21.bluecat",
+  "version": "6.0.0",
+  "name": "OMG Premium TV",
+  "description": "Addon per Stremio: canali TV/IPTV da playlist M3U8 con EPG e proxy integrati",
+  "logo": "https://raw.githubusercontent.com/fraceks21/bluecat/main/tv.png",
+  "resources": ["stream", "catalog", "meta"],
+  "types": ["tv"],
+  "idPrefixes": ["tv"],
+  "catalogs": [
+    {
+      "type": "tv",
+      "id": "omg_plus_tv",
+      "name": "OMG+ TV",
+      "extra": [
+        { "name": "genre",  "isRequired": false, "options": [] },
+        { "name": "search", "isRequired": false },
+        { "name": "skip",   "isRequired": false }
+      ]
+    }
+  ],
+  "behaviorHints": {
+    "configurable": true,
+    "configurationURL": "https://bluecat.onrender.com/?m3u=https%3A%2F%2Fraw.githubusercontent.com%2Ffraceks21%2Fbluecat%2Fmain%2Flistone.m3u8&epg=https%3A%2F%2Fraw.githubusercontent.com%2Ffraceks21%2Fbluecat%2Fmain%2Fepg.xml&proxy=https%3A%2F%2Fcekky-eightcatsrollingdownthestairs.hf.space&password=frc&forceProxy=true&updateInterval=02%3A00",
+    "reloadRequired": true
+  }
 }
